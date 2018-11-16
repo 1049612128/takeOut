@@ -2,7 +2,7 @@
   <section class="loginContainer">
     <div class="loginInner">
       <div class="login_header">
-        <h2 class="login_logo">硅谷外卖</h2>
+        <h2 class="login_logo">101外卖</h2>
         <div class="login_header_title">
           <a href="javascript:;" :class="{on: loginWay}" @click="loginWay=true">短信登录</a>
           <a href="javascript:;" :class="{on: !loginWay}" @click="loginWay=false">密码登录</a>
@@ -61,7 +61,7 @@
 
 <script>
 import AlertTip from '@/components/AlertTip/AlertTip.vue'
-// import {reqSendCode, reqSmsLogin, reqPwdLogin} from '@/api'
+import {reqSendCode, reqSmsLogin, reqPwdLogin} from '@/api'
 export default {
   data () {
     return {
@@ -123,7 +123,7 @@ export default {
       let result
       // 前台表单验证
       if (this.loginWay) { // 短信登陆
-        const {rightPhone, phone, code} = this
+        const {phone, code} = this
         if (!this.rightPhone) {
           // 手机号不正确
           this.showAlert('手机号不正确')
@@ -194,8 +194,8 @@ export default {
 }
 </script>
 
-<style lang="stylus" rel="stylesheet/stylus">
-  @import "@/common/stylus/mixins.styl"
+<style lang="stylus">
+  @import "~@/common/stylus/mixins.styl"
   .loginContainer
     width 100%
     height 100%
