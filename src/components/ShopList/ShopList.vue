@@ -43,7 +43,7 @@
     </ul>
     <ul v-else>
       <li v-for="item in 6">
-        <img src="./images/shop_back.svg" alt="back">
+        <img src="./images/shop_back.svg" alt="" >
       </li>
     </ul>
   </div>
@@ -69,7 +69,7 @@ export default {
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">
-  @import "../../common/stylus/mixins.styl"
+  @import "~@/common/stylus/mixins.styl"
   .shop_container
     margin-bottom 50px
     .shop_list
